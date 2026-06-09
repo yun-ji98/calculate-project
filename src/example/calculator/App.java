@@ -7,6 +7,8 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        while (true) {
+
         //양의 정수 입력받기
         System.out.print("첫 번째 숫자를 입력하세요: ");
         int firstNumber = sc.nextInt();
@@ -44,10 +46,17 @@ public class App {
                 System.out.println("result: " + result);
             }
 
+        } else {
+            System.out.println("올바른 사칙연산 기호를 입력해주세요.");
         }
 
+        System.out.print("더 계산하시겠습니까? (exit 입력 시 종료): ");
+        String answer = sc.next();
 
-
+        if (answer.equals("exit")) {
+            break;
         }
-    }
+
+    }}}
+
 
