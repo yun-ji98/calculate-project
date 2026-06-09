@@ -21,6 +21,15 @@ public class App {
         System.out.print("사칙연산 기호를 입력하세요: ");
         char operator = sc.next().charAt(0);
 
+        //위에서 입력받은 양의 정수 2개와 사칙연산 기호를 사용하여 연산을 진행한 후 결과값을 출력하기
+        int result = 0;
 
+        if (operator=='+')
+            result = firstNumber + secondNumber;
+        System.out.println("result = " + result);
+
+
+
+        }
     }
-}
+
