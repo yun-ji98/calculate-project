@@ -16,5 +16,11 @@ public class App {
 
         System.out.println("첫 번째 숫자 = " + firstNumber);
         System.out.println("두 번째 숫자 = " + secondNumber);
+
+        //사칙연산 기호 입력받기
+        System.out.print("사칙연산 기호를 입력하세요: ");
+        char operator = sc.next().charAt(0);
+
+
     }
 }
