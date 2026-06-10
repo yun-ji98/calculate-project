@@ -44,6 +44,7 @@ public class App {
             } else {
                 result = firstNumber / secondNumber;
                 System.out.println("result: " + result);
+
             }
 
         } else {
@@ -58,5 +59,4 @@ public class App {
         }
 
     }}}
-
 
