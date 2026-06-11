@@ -4,6 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
+    private String secret;
+
+    // Getter
+    public String getSecret() {
+        return this.secret;
+    }
+
+    // Setter
+    public void setSecret(String secret) {
+        this.secret = secret;
+    }
 
     // 생성자
     public Calculator() {
@@ -25,6 +36,8 @@ public class Calculator {
         }
 
         return result;
+
+
 
     }
 

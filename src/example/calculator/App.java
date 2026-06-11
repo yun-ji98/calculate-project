@@ -18,6 +18,12 @@ public class App {
             char operator = sc.next().charAt(0);
             // String operator = sc.next();
 
+            // Getter
+            String secret = calculator.getSecret();
+
+            // Setter
+            calculator.setSecret("값");
+
             System.out.print("두 번째 숫자를 입력하세요: ");
             int secondNumber = sc.nextInt();
             // System.out.println("두 번째 숫자 = " + secondNumber);
