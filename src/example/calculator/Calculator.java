@@ -5,10 +5,6 @@ import java.util.List;
 
 public class Calculator {
 
-    // 속성
-    private List<Integer> results = new ArrayList<>();
-
-
     // 생성자
     public Calculator() {
 
@@ -27,9 +23,6 @@ public class Calculator {
         } else if (operator == '/') {
             result = firstNumber / secondNumber;
         }
-
-        // 리스트 저장 코드
-        results.add(result);
 
         return result;
 
