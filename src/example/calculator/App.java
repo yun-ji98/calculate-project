@@ -66,6 +66,11 @@ public class App {
             else
                 System.out.print("\n");
         }
+
+        calculator.removeResult();
+
+        //System.out.println(calculator.getResults());
+
     }
 }
 

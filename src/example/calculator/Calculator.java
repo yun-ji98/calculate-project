@@ -37,10 +37,16 @@ public class Calculator {
 
         return result;
 
+    }
 
+    public void removeResult() {
 
     }
 
+    //public List<Integer> getResults() {
+       // return null;
+    //}
 
-    }
+
+}
 
