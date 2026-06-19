@@ -2,25 +2,23 @@ package example.calculator2;
 
 public class ArithmeticCalculator {
     public static void main(String[] args) {
-
     }
 
-    public int calculate(int firstNumber, int secondNumber, char operator) {
-        int result = 0;
+    public <T extends Number> double calculate(T firstNumber, T secondNumber, char operator) {
+        double result = 0;
 
         OperatorType operatorType = OperatorType.fromSymbol(operator);
 
         if (operatorType == OperatorType.PLUS) {
-            result = firstNumber + secondNumber;
+            result = firstNumber.doubleValue() + secondNumber.doubleValue();
         } else if (operatorType == OperatorType.MINUS) {
-            result = firstNumber - secondNumber;
+            result = firstNumber.doubleValue() - secondNumber.doubleValue();
         } else if (operatorType == OperatorType.MULTIPLY) {
-            result = firstNumber * secondNumber;
+            result = firstNumber.doubleValue() * secondNumber.doubleValue();
         } else if (operatorType == OperatorType.DIVIDE) {
-            result = firstNumber / secondNumber;
+            result = firstNumber.doubleValue() / secondNumber.doubleValue();
         }
         return result;
-
     }
 
     enum OperatorType {
