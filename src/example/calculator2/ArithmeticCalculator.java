@@ -5,12 +5,29 @@ public class ArithmeticCalculator {
 
     }
 
+    public int calculate(int firstNumber, int secondNumber, char operator) {
+        int result = 0;
+
+        OperatorType operatorType = OperatorType.fromSymbol(operator);
+
+        if (operatorType == OperatorType.PLUS) {
+            result = firstNumber + secondNumber;
+        } else if (operatorType == OperatorType.MINUS) {
+            result = firstNumber - secondNumber;
+        } else if (operatorType == OperatorType.MULTIPLY) {
+            result = firstNumber * secondNumber;
+        } else if (operatorType == OperatorType.DIVIDE) {
+            result = firstNumber / secondNumber;
+        }
+        return result;
+
+    }
+
     enum OperatorType {
         PLUS('+'),
         MINUS('-'),
         MULTIPLY('*'),
         DIVIDE('/');
-
 
         private final char symbol;
 
@@ -22,7 +39,7 @@ public class ArithmeticCalculator {
             return symbol;
         }
 
-        public static OperatorType fromSymbol ( char operator) {
+        public static OperatorType fromSymbol (char operator) {
             OperatorType[] values = OperatorType.values();
             for (int i = 0; i < values.length; i++) {
                 OperatorType value = values[i];
