@@ -2,9 +2,18 @@ package example.calculator2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ArithmeticCalculator {
     private final List<Double> results = new ArrayList<>();
+    public List<Double> getResultsGreaterThan(double number) {
+        Stream<Double> stream = results.stream();
+        Stream<Double> filterStream = stream.filter(num -> num > number);
+        List<Double> ret2 = filterStream.collect(Collectors.toList());
+        return ret2;
+    }
+
     public static void main(String[] args) {
     }
 
@@ -24,8 +33,9 @@ public class ArithmeticCalculator {
         }
 
         results.add(result);
-
         return result;
+
+
     }
 
     enum OperatorType {
