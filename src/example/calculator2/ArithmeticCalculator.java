@@ -1,6 +1,10 @@
 package example.calculator2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArithmeticCalculator {
+    private final List<Double> results = new ArrayList<>();
     public static void main(String[] args) {
     }
 
@@ -18,6 +22,9 @@ public class ArithmeticCalculator {
         } else if (operatorType == OperatorType.DIVIDE) {
             result = firstNumber.doubleValue() / secondNumber.doubleValue();
         }
+
+        results.add(result);
+
         return result;
     }
 
@@ -49,5 +56,7 @@ public class ArithmeticCalculator {
 
             throw new IllegalArgumentException("지원하지 않는 연산자입니다.");
         }
+
+
     }
 }
